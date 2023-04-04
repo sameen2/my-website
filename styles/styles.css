@@ -15,6 +15,7 @@
 	--link-color: #035fe6;
 	--link-hover-color: #136ff6;
 	--background-color: cyan;
+	--light-gray: #D3D3D3;
 	--overlay-background-color: #eee;
 	--highlight-background-color: #ccc;
 	--text-color: magenta;
@@ -269,6 +270,12 @@ main .section {
 }
 
 /* section metadata */
-main .section.highlight {
-	background-color: var(--highlight-background-color);
+main .section {
+	&.highlight {
+		background-color: var(--highlight-background-color);
+	}
+	&.light-gray {
+		background-color: var(--light-gray);
+	}
 }
+
