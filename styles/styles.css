@@ -270,12 +270,10 @@ main .section {
 }
 
 /* section metadata */
-main .section {
-	&.highlight {
-		background-color: var(--highlight-background-color);
-	}
-	&.light-gray {
-		background-color: var(--light-gray);
-	}
+main .section.highlight {
+	background-color: var(--highlight-background-color);
+}
+main .section.light-gray {
+	background-color: var(--light-gray);
 }
 
