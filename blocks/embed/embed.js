@@ -1,4 +1,4 @@
-import { loadCSS } from "../../scripts/scripts.js";
+// import { loadCSS } from "../../scripts/scripts.js";
 
 const jsonpGist = (url, callback) => {
 	// Setup a unique name that cane be called & destroyed
@@ -26,7 +26,7 @@ const gist = (element) => {
 	const url = href.slice(-2) === "js" ? `${href}on` : `${href}.json`;
 
 	jsonpGist(url, (data) => {
-		loadCSS(data.stylesheet);
+		// loadCSS(data.stylesheet);
 		element.insertAdjacentHTML("afterend", data.div);
 		element.remove();
 	});
