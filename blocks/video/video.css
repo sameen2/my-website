@@ -1,0 +1,36 @@
+.block.video {
+	position: relative;
+}
+
+.block.video .video-play-pause-toggle-button {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	padding: 0;
+	width: 90px;
+	height: 90px;
+	color: red;
+	font-size: 20px;
+	border-radius: 50%;
+	transform: translate(-50%, -50%);
+	background: rgba(133, 133, 133, 0.3);
+	border: 4px solid rgba(133, 133, 133, 0.6);
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	visibility: hidden;
+}
+
+.block.video video:hover + .video-play-pause-toggle-button {
+	visibility: visible;
+}
+
+.block.video .video-play-pause-toggle-button:hover {
+	visibility: visible;
+}
+
+/* .block.video .video-play-pause-toggle-button:hover {
+	background: rgba(133, 133, 133, 0.4);
+	border-color: rgba(133, 133, 133, 0.7);
+} */
