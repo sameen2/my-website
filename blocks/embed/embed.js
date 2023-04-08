@@ -44,8 +44,8 @@ const youtube = (element) => {
 };
 
 export default function decorate(block) {
-	const element = block.firstElementChild.children[0];
-	console.log("element: ", element, element.textContent, element.textContent);
+	const [element] = block.firstElementChild.children;
+	console.log("element: ", element, element.innerText, element.textContent);
 	const { hostname } = new URL(element.textContent);
 	if (hostname.includes("youtu")) {
 		youtube(block);
