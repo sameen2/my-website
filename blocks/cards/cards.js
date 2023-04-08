@@ -19,6 +19,6 @@ export default async function decorate(block) {
   	const json = await fetch(
 		"https://main--my-website--sameen2.hlx.page/json-data.json"
 	);
-	const response = json.json();
+	const response = await json.json();
 	console.log({ json, response });
 }
