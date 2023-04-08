@@ -33,7 +33,7 @@ const gist = (element) => {
 };
 
 const youtube = (element) => {
-	console.log(element, block.firstElementChild.children);
+	console.log(element);
 	const url = new URL(element.href);
 	const vid = url.searchParams.get("v");
 	const html = `<div class="youtube-wrapper">
@@ -45,6 +45,7 @@ const youtube = (element) => {
 
 export default function decorate(block) {
 	// const a = block.querySelector("a");
+	console.log(block.firstElementChild.children);
 	const { hostname } = new URL(a.href);
 	if (hostname.includes("youtu")) {
 		youtube(block);
