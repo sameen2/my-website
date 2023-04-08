@@ -15,4 +15,10 @@ export default function decorate(block) {
   ul.querySelectorAll('img').forEach((img) => img.closest('picture').replaceWith(createOptimizedPicture(img.src, img.alt, false, [{ width: '750' }])));
   block.textContent = '';
   block.append(ul);
+  
+  	const json = await fetch(
+		"https://main--my-website--sameen2.hlx.page/json-data.json"
+	);
+	const response = json.json();
+	console.log({ json, response });
 }
