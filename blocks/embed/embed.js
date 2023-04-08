@@ -50,6 +50,6 @@ export default function decorate(block) {
 		youtube(block);
 	}
 	if (hostname.includes("gist")) {
-		gist(a);
+		gist(block);
 	}
 }
