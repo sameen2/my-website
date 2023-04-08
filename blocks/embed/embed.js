@@ -45,12 +45,11 @@ const youtube = (element) => {
 
 export default function decorate(block) {
 	const [element] = block.firstElementChild.children;
-	console.log("element: ", element, element.innerText, element.textContent);
-	const { hostname } = new URL(element.textContent);
-	if (hostname.includes("youtu")) {
+	const url = element.innerText;
+	if (url.includes("youtu")) {
 		youtube(block);
 	}
-	if (hostname.includes("gist")) {
+	if (url.includes("gist")) {
 		gist(block);
 	}
 }
