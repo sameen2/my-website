@@ -17,7 +17,7 @@ export default async function decorate(block) {
   block.append(ul);
   
   	const json = await fetch(
-		"https://main--my-website--sameen2.hlx.page/json-data.json"
+		"https://main--my-website--sameen2.hlx.page/json-data.json??sheet=users&sheet=default"
 	);
 	const response = await json.json();
 	console.log({ json, response });
