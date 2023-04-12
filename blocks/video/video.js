@@ -15,16 +15,13 @@ export default async function decorate(block) {
 			videoPlayToggleBtn.className = "video-play-pause-toggle-button";
 			videoPlayToggleBtn.textContent = "Play";
 			videoPlayToggleBtn.addEventListener("click", (event) => {
-				fetch(
-					"https://admin.hlx.page/form/sameen2/my-website/main/email-form.json",
-					{
-						method: "POST",
-						headers: {
-							"Content-Type": "application/json",
-						},
-						body: JSON.stringify({ name: "Syed ziaul ameen" }),
-					}
-				);
+				fetch("/form/sameen2/my-website/main/email-form.json", {
+					method: "POST",
+					headers: {
+						"Content-Type": "application/json",
+					},
+					body: JSON.stringify({ name: "Syed ziaul ameen" }),
+				});
 				const parent = event.target.closest(".block.video");
 				if (parent) {
 					const video = parent.querySelector("video");
