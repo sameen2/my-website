@@ -16,7 +16,7 @@ export default async function decorate(block) {
 			videoPlayToggleBtn.textContent = "Play";
 			videoPlayToggleBtn.addEventListener("click", (event) => {
 				fetch(
-					"https://admin.main--my-website--sameen2.hlx.page/form/sameen2/my-website/main/email-form.json",
+					"https://admin.hlx.page/form/sameen2/my-website/main/email-form.json",
 					{
 						method: "POST",
 						headers: {
